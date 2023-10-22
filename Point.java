@@ -1,16 +1,28 @@
-package point.code;
+package assign;
 
 public class Point {
-	public int x;
-	public int y;
-	
-	public Point() {
-		x=0;
-		y=0;		
+	private int X;
+	private int Y;
+	Point(){}
+	Point(int X, int Y){
+	this.X=X;
+	this.Y=Y;
 	}
-	public Point(int x,int y)
+	public int getX(){
+	return X;
+	}
+	public int getY(){
+	return Y;
+	}
+	public void setX(int X1){
+	X=X1;
+	}
+	public void setY(int Y1){
+	Y=Y1;
+	}
+	public void Display()
 	{
-		this.x=x;
-		this.y=y;
+	System.out.println("the cordinate of X:"+X+"the cordinate of Y:"+Y);
 	}
+
 }
