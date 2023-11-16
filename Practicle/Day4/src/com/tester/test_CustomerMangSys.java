@@ -1,0 +1,80 @@
+package com.tester;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import Utils.ValidatePlan;
+//import custom_exceptions.InvalidInputException;
+
+import com.code.CustomerMangSys;
+import com.code.ServicePlan;
+import com.code.Vehicle;
+import static Utils.ValidatePlan.*;
+import static Utils.Login.forLogin;
+
+public class test_CustomerMangSys {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try(Scanner sc = new Scanner(System.in)){
+			
+		
+		List<CustomerMangSys> customers=new ArrayList<>();
+		boolean exit=false;
+		while(!exit)
+		try{
+			System.out.println("Enter your choice\n" + "1.Sign up\n" + "2.Sign in\n" + "3.Change password\n" + "4.Remove customer\n"
+					+ "5.Display customer\n" + "6.Sort as per email" +"0.Exit\n");
+			switch(sc.nextInt())
+			{
+			case 1:
+				System.out.println("Enter fName, lName, email, password, registrationAmount, dob, plan");
+				CustomerMangSys c1=validateAllInput(sc.next(),sc.next(),sc.next(),sc.next(),sc.nextDouble(),sc.next(),sc.next(),customers);
+				customers.add(c1);
+				System.out.println("Customer Added successfully");
+				break;
+			case 2:
+				System.out.println("enter email and password");
+				c1=forLogin(sc.next(),sc.next(),customers);
+				System.out.println("Login successfully");
+				break;
+			case 3:
+				System.out.println("Enter email,password");
+				c1=forLogin(sc.next(),sc.next(),customers);
+				System.out.println("Enter new password");
+				c1.setPassword(sc.next());
+				System.out.println("Password updated");
+				break;
+			case 4:
+				System.out.println("Enter email");
+				boolean removed = customers.remove(new CustomerMangSys(sc.next()));
+				if (removed)
+					System.out.println("customer details removed");
+//				else
+//					throw new InvalidInputException("customer details can't be removed : invalid email!!!!");
+				break;
+			case 5:
+				for(CustomerMangSys c:customers)
+					System.out.println(c);
+				break;
+			case 6:
+				//Collections.sort(customers);
+			case 0:
+				exit = true;
+				break;
+			}
+			
+		}
+
+		catch (Exception e) {
+			System.out.println(e);
+			System.out.println(sc.next());
+			e.printStackTrace();
+		}
+	}
+}
+}
+//import static utils.ShowroomValidations.validateAllInputs;

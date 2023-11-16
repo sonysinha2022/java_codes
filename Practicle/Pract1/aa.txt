@@ -1,0 +1,5 @@
+Customer [customer_id=1, fName=Monika, lName=Kardile, email=monikakardile@gmail.com, password=mnk@123, registrationAmount=1000.0, dob=2020-08-24, plan=SILVER, lastSubscriptionPaidDate=2023-03-05]
+Customer [customer_id=2, fName=Akan, lName=Gadge, email=akanksa@gmail.com, password=aka@123, registrationAmount=2000.0, dob=2020-08-24, plan=GOLD, lastSubscriptionPaidDate=2023-02-15]
+Customer [customer_id=3, fName=Angha, lName=Thorat, email=angha@gmail.com, password=ang@123, registrationAmount=5000.0, dob=2022-06-07, plan=DIAMOND, lastSubscriptionPaidDate=2023-06-21]
+Customer [customer_id=4, fName=Divya, lName=Shiral, email=divya@gmail.com, password=dvy@123, registrationAmount=2000.0, dob=2021-12-13, plan=GOLD, lastSubscriptionPaidDate=2023-05-06]
+Customer [customer_id=5, fName=Hindavi, lName=Dhole, email=hindavi@gmail.com, password=hnd@123, registrationAmount=2000.0, dob=2022-09-28, plan=GOLD, lastSubscriptionPaidDate=2023-05-25]
